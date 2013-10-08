@@ -1,0 +1,88 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento / Mediotype Module
+ *
+ *
+ * @desc
+ * @category    Mediotype
+ * @package
+ * @class
+ * @copyright   Copyright (c) 2013 Mediotype (http://www.mediotype.com)
+ *              Copyright, 2013, Mediotype, LLC - US license
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Mediotype <diveinto@mediotype.com>
+ */
+ -->
+<config>
+    <modules>
+        <Mediotype_Twitter>
+            <version>0.1.0</version>
+        </Mediotype_Twitter>
+    </modules>
+    <global>
+        <helpers>
+            <twitter>
+                <class>Mediotype_Twitter_Helper</class>
+            </twitter>
+        </helpers>
+        <blocks>
+            <mediotype_twitter>
+                <class>Mediotype_Twitter_Block</class>
+            </mediotype_twitter>
+        </blocks>
+        <models>
+            <twitter>
+                <class>Mediotype_Twitter_Model</class>
+            </twitter>
+        </models>
+        <events>
+            <core_config_data_save_commit_after>
+                <observers>
+                    <mediotype_twitter>
+                        <class>Mediotype_Twitter_Model_Observer</class>
+                        <method>clearCache</method>
+                    </mediotype_twitter>
+                </observers>
+            </core_config_data_save_commit_after>
+        </events>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <twitter>
+                    <file>tweets.xml</file>
+                </twitter>
+            </updates>
+        </layout>
+    </frontend>
+    <adminhtml>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <twitter_config translate="title" module="twitter">
+                                            <title>Mediotype</title>
+                                        </twitter_config>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+    </adminhtml>
+    <default>
+        <twitter_config>
+            <general>
+                <tweet_number>3</tweet_number>
+                <cache_time>5</cache_time>
+            </general>
+        </twitter_config>
+    </default>
+</config>
