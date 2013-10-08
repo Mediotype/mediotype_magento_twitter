@@ -94,7 +94,6 @@ shell/indexer.php
 shell/log.php
 skin/adminhtml/default/default/
 skin/adminhtml/default/enterprise
-skin/frontend/base/
 skin/frontend/default/blank/
 skin/frontend/default/blue/
 skin/frontend/default/default/

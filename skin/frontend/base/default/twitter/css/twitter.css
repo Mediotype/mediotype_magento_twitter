@@ -1,0 +1,33 @@
+/**
+ * Magento / Mediotype Module
+ *
+ *
+ * @desc        tweets
+ * @copyright   Copyright (c) 2013 Mediotype (http://www.mediotype.com)
+ *              Copyright, 2013, Mediotype, LLC - US license
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Mediotype <diveinto@mediotype.com>
+ */
+.tweets-wrapper{margin-top:40px; padding:10px; padding-bottom: 20px;border-top: 2px solid #CECECE; border-bottom: 2px solid #CECECE; overflow:hidden;}
+.tweet-header{overflow:hidden;}
+.tweet-wrapper{ padding:0 20px 0 30px; border-left: 2px solid #CECECE; width: 27%; float:left }
+.tweet-wrapper:first-child{border-left:none}
+.tweet-time{display:block; font-weight:normal;font-size:10px}
+.follow-twitter{display:inline-block; width:20px; height:17px; background:url(../../images/follow_twitter.png) no-repeat;margin-left:3px}
+.tweet .links{overflow:hidden}
+.tweet .links .handle a{color:#CECECE}
+.tweet .links .handle a:visited{color:#CECECE}
+.tweet .links .handle a:hover{color:#CECECE}
+.tweet .links a{color:#333;text-decoration:none}
+.tweet .links a:hover{color: #333}
+.tweet .links a:visited{color: #333}
+.tweet .avatar{width:25px;height:25px;float:left}
+.tweet .content{margin-left:27px}
+.tweet .actions{width:25px;text-align:center;float:left;clear:left;margin-top:12px;display:none}
+.tweet:hover .actions{display:block}
+.tweet .actions .reply{display:inline-block;width:11px; height:16px;background:url(../images/everything-spritev2.png) -3px 0 no-repeat}
+.tweet .actions .retweet{display:inline-block;width:14px; height:16px;background:url(../images/everything-spritev2.png) -81px 0 no-repeat}
+.tweet .actions .favorite{display:inline-block;width:15px; height:16px;background:url(../images/everything-spritev2.png) -33px 0 no-repeat}
+.tweet .actions .reply:hover{display:inline-block;width:11px; height:16px;background:url(../images/everything-spritev2.png) -19px 0 no-repeat}
+.tweet .actions .retweet:hover{display:inline-block;width:14px; height:16px;background:url(../images/everything-spritev2.png) -97px 0 no-repeat}
+.tweet .actions .favorite:hover{display:inline-block;width:15px; height:16px;background:url(../images/everything-spritev2.png) -49px 0 no-repeat}
