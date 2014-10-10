@@ -1,0 +1,35 @@
+<?php
+/**
+ * Magento / Mediotype Module
+ *
+ *
+ * @desc
+ * @category    Mediotype
+ * @package
+ * @class
+ * @copyright   Copyright (c) 2013 Mediotype (http://www.mediotype.com)
+ *              Copyright, 2013, Mediotype, LLC - US license
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Mediotype <diveinto@mediotype.com>
+ */
+/**
+* grab tweets and put em on the page
+ * @var $this Mediotype_Twitter_Block_Tweets
+*/
+$tweets = $this->getTweets();
+?>
+<?php if($tweets): ?>
+<div class="tweets-wrapper">
+	<div class="tweet-header">
+		<h3 class="left">OUR LATEST TWEETS</h3>
+		<h2 class="right"><a href="https://twitter.com/intent/user?screen_name=<?php echo $this->getTwitterHandle() ?>" target="_blank">FOLLOW US<span class="follow-twitter"></span></a></h2>
+	</div>
+	<ul class="tweets">
+        <?php foreach($tweets as $_tweet): ?>
+        <?php $this->getChild('tweet')->setTweet($_tweet); ?>
+            <li class="tweet-wrapper"><?php echo $this->getChildHtml('tweet',false) ?></li>
+        <?php endforeach; ?>
+	</ul>
+</div>
+<script type="text/javascript" src="//platform.twitter.com/widgets.js"></script>
+<?php endif; ?>

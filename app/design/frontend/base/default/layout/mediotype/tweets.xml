@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento / Mediotype Module
+ *
+ *
+ * @desc
+ * @category    Mediotype
+ * @package
+ * @class
+ * @copyright   Copyright (c) 2013 Mediotype (http://www.mediotype.com)
+ *              Copyright, 2013, Mediotype, LLC - US license
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Mediotype <diveinto@mediotype.com>
+ */
+-->
+<layout version="0.1.0">
+    <!--add tweets-->
+    <default>
+        <reference name="head">
+            <action method="addCss"><stylesheet>mediotype/twitter/css/twitter.css</stylesheet></action>
+        </reference>
+        <reference name="root">
+            <block type="mediotype_twitter/tweets" name="tweets" as="tweets" template="mediotype/twitter/tweets.phtml">
+                <block type="mediotype_twitter/renderer_tweet" name="tweet" as="tweet" template="mediotype/twitter/renderer/tweet.phtml" />
+            </block>
+        </reference>
+    </default>
+</layout>

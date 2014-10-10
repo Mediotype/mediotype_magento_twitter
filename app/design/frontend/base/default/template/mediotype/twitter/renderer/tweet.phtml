@@ -1,0 +1,33 @@
+<?php
+/**
+ * Magento / Mediotype Module
+ *
+ *
+ * @desc
+ * @category    Mediotype
+ * @package
+ * @class
+ * @copyright   Copyright (c) 2013 Mediotype (http://www.mediotype.com)
+ *              Copyright, 2013, Mediotype, LLC - US license
+ * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
+ * @author      Mediotype <diveinto@mediotype.com>
+ */
+/**  @var $this Mediotype_Twitter_Block_Renderer_Tweet*/
+$_tweetId = $this->getTweetId()
+?>
+<div class="tweet">
+    <a href="<?php echo $this->getUserUrl() ?>"><img class="avatar" alt="<?php echo $this->getHandle() ?>" src="<?php echo $this->getAvatarUrl() ?>" width="25" height="25" /></a>
+    <div class="actions">
+        <a class="reply" href="https://twitter.com/intent/tweet?in_reply_to=<?php echo $_tweetId ?>"></a>
+        <a class="retweet" href="https://twitter.com/intent/retweet?tweet_id=<?php echo $_tweetId ?>"></a>
+        <a class="favorite" href="https://twitter.com/intent/favorite?tweet_id=<?php echo $_tweetId ?>"></a>
+    </div>
+    <div class="content">
+        <p class="links">
+            <span class="name"><a href="<?php echo $this->getUserUrl() ?>"><?php echo $this->getName() ?></a></span>&nbsp;
+            <span class="handle"><a href="<?php echo $this->getUserUrl() ?>">@<?php echo $this->getHandle() ?></a></span>
+            <span class="tweet-time"><a href="<?php echo $this->getPermaUrl() ?>"><?php echo $this->getPostTime(); ?></a></span>
+        </p>
+        <p class="tweet-text"><?php echo $this->parseTwitterLinks() ?></p>
+    </div>
+</div>
