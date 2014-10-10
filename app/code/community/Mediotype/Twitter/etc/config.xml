@@ -51,7 +51,7 @@
         <layout>
             <updates>
                 <twitter>
-                    <file>tweets.xml</file>
+                    <file>mediotype/tweets.xml</file>
                 </twitter>
             </updates>
         </layout>

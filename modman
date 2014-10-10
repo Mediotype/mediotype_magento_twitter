@@ -1,0 +1,5 @@
+app/code/community/Mediotype/Twitter/ app/code/community/Mediotype/Twitter/
+app/design/frontend/base/default/layout/mediotype/tweets.xml app/design/frontend/base/default/layout/mediotype/tweets.xml
+app/design/frontend/base/default/template/mediotype/twitter app/design/frontend/base/default/template/mediotype/twitter
+app/etc/modules/Mediotype_Twitter.xml app/etc/modules/Mediotype_Twitter.xml
+skin/frontend/base/default/mediotype/twitter skin/frontend/base/default/mediotype/twitter
